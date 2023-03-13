@@ -49,24 +49,20 @@ $(function(){ //최초 웹브라우저가 동작하는 순간
 
 let pageFlag = false;
 
-function change (){
+function change(menu){
     pageFlag = !pageFlag;
 
     if(pageFlag){
         $("#my").hide();
         $("#custom").hide();
-        $("#interestShop").hide();
         $("#back").show();
-        $("#reserve").show();
-        
+        $(menu).show();
         
     } else{
         $("#my").show();
         $("#custom").show();
         $("#back").hide();
-        $("#reserve").hide();
-        $("#interestDn").hide();
-        $("#interestShop").hide();
+        $(menu).hide();
     };
 
 };
