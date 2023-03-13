@@ -1,0 +1,33 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{margin:0; padding:0; box-sizing:border-box; outline:none}
+li {list-style:none}
+a {text-decoration:none}
+
+
+.hairshop-card-area {
+    padding: 80px 0;
+}
+.hairshop-card-area .hairshop-card {background:#fff;width: 1100px;margin:0 auto;border-radius:30px;height: 480px;display: flex;flex-direction: column;}
+.hairshop-card-area .hairshop-card .slidebox {overflow:hidden;flex:1;margin: 30px 30px 0 30px;}
+
+.hairshop-card .slidebox .shopbox {width: 570px;height:330px;border-radius:10px;overflow: hidden;}
+.hairshop-card .slidebox .shopbox > a {}
+.hairshop-card .slidebox .shopbox > a > img {width:100%; height:100%; object-fit: cover;}
+
+.hairshop-card .slidebox .stylebox {width: 300px;height:330px;border-radius: 10px;overflow:hidden}
+.hairshop-card .slidebox .stylebox > a {}
+.hairshop-card .slidebox .stylebox > a > img {width:100%; height:100%; object-fit: cover;}
+
+.hairshop-card .bottom-txt {}
+.hairshop-card .bottom-txt .name {}
+.hairshop-card .bottom-txt .info {}
+
+.hairshop-card .bottom-txt .info .ico {}
+.hairshop-card .bottom-txt .info .ico.star::before {}
+.hairshop-card .bottom-txt .info .ico.review::after {}
+.hairshop-card .bottom-txt .info .ico.time {}
+.hairshop-card .bottom-txt .info .ico.price {}
+
+.hairshop-card .bottom-txt .bio {}
