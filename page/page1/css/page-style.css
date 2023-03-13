@@ -21,10 +21,10 @@ a {text-decoration:none}
 .hairshop-card .slidebox .stylebox > a > img {width:100%; height:100%; object-fit: cover;}
 
 .hairshop-card .bottom-txt {}
-.hairshop-card .bottom-txt .name {}
+.hairshop-card .bottom-txt .name {font-family:'NotoSansKR-Bold';}
 .hairshop-card .bottom-txt .info {}
 
-.hairshop-card .bottom-txt .info .ico {}
+.hairshop-card .bottom-txt .info .ico {font-family:'NotoSansKR-Light';}
 .hairshop-card .bottom-txt .info .ico.star::before {}
 .hairshop-card .bottom-txt .info .ico.review::after {}
 .hairshop-card .bottom-txt .info .ico.time {}
