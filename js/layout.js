@@ -1,31 +1,31 @@
 // JavaScript Document
-$(function(){ //최초 웹브라우저가 동작하는 순간
+$(function () { //최초 웹브라우저가 동작하는 순간
     $("#reserve").hide();
     $("#interestShop").hide();
     $("#interestDn").hide();
     $("#back").hide();
 
-    $("header .mbtn > a").click(function(){
+    $("header .mbtn > a").click(function () {
         $(".mymenu").addClass("on");
 
-        $("header .mymenu .closebtn").click(function(){
+        $("header .mymenu .closebtn").click(function () {
             $(".mymenu").removeClass("on");
         })
     });
 
-    $(".dnsearchbox").click(function(){
+    $(".dnsearchbox").click(function () {
         $(".dn-search-area, .dn-search").addClass("on");
 
-        $(".dn-search-area .close-btn").click(function(){
+        $(".dn-search-area .close-btn").click(function () {
             $(".dn-search-area, .dn-search").removeClass("on");
         })
     })
 
-    
-    $(document).ready(function(){
+
+    $(document).ready(function () {
         $.datepicker.setDefaults($.datepicker.regional['ko']);
         $("#datepicker").datepicker({
-            dateFormat:"yy/mm/dd",
+            dateFormat: "yy/mm/dd",
             minDate: new Date(2022, 0, 1),
             maxDate: "+1y",
             defaultDate: new Date(2022, 4, 1)
@@ -33,12 +33,12 @@ $(function(){ //최초 웹브라우저가 동작하는 순간
     });
 
 
-    $(document).ready(function(){
+    $(document).ready(function () {
         $('.tabconts .cont').first().show();
         $('.tablist > li').first().addClass('on');
     });
 
-    $('.tablist > li').click(function(){
+    $('.tablist > li').click(function () {
         $('.tablist > li').removeClass('on');
         $(this).addClass('on');
         $('.tabconts .cont').hide();
@@ -49,37 +49,42 @@ $(function(){ //최초 웹브라우저가 동작하는 순간
 
 let pageFlag = false;
 
-function change(menu){
+function change(menu) {
     pageFlag = !pageFlag;
 
-    if(pageFlag){
+    if (pageFlag) {
         $("#my").hide();
         $("#custom").hide();
         $("#back").show();
         $(menu).show();
-        
-    } else{
+
+
+    } else {
         $("#my").show();
         $("#custom").show();
         $("#back").hide();
         $(menu).hide();
     };
+};
 
+function back(){
+    $("#reserve").show();
+    $("#interestShop").show();
+    $("#interestDn").show();
+    $("#back").show();
 };
 
 
-
 // 검색박스 클로즈버튼
-function showClose(){
-    if($("#locationSearch, #datepicker, #myTimepicker, #dnSearch").val().length != 0){
+function showClose() {
+    if ($("#locationSearch, #datepicker, #myTimepicker, #dnSearch").val().length != 0) {
         $("#close").show();
-    } else{
+    } else {
         $("#close").hide();
     }
 }
 
-
-function remove(){
+function remove() {
     $("#close").hide();
     $("#locationSearch, #datepicker, #myTimepicker, #dnSearch").val("");
 }
