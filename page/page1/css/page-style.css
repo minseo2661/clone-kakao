@@ -20,14 +20,29 @@ a {text-decoration:none}
 .hairshop-card .slidebox .stylebox > a {}
 .hairshop-card .slidebox .stylebox > a > img {width:100%; height:100%; object-fit: cover;}
 
-.hairshop-card .bottom-txt {}
-.hairshop-card .bottom-txt .name {font-family:'NotoSansKR-Bold';}
+.hairshop-card .bottom-txt {
+    margin: 0px 0 30px 30px;
+}
+.hairshop-card .bottom-txt .name {font-family:'NotoSansKR-Bold';font-size: 20px;}
 .hairshop-card .bottom-txt .info {}
 
 .hairshop-card .bottom-txt .info .ico {font-family:'NotoSansKR-Light';}
-.hairshop-card .bottom-txt .info .ico.star::before {}
-.hairshop-card .bottom-txt .info .ico.review::after {}
-.hairshop-card .bottom-txt .info .ico.time {}
-.hairshop-card .bottom-txt .info .ico.price {}
+.hairshop-card .bottom-txt .info .ico.star::before {  content: "";
+    display:inline-block;
+    background:url(../../../img/y_star.png) no-repeat 0 0;
+    width: 20px;
+    height: 18px;
+    background-size: contain;
+    margin: 0px 3px -3px 0;}
+.hairshop-card .bottom-txt .info .ico.review::after { content: "";
+    display:inline-block;
+    background:url(../../../img/review.png) no-repeat 0 0;
+    width: 22px;
+    height: 17px;
+    background-size: contain;
+    margin: 0px 3px -5px 0px;}
+
+.hairshop-card .bottom-txt .info .time {}
+.hairshop-card .bottom-txt .info .price {}
 
 .hairshop-card .bottom-txt .bio {}
