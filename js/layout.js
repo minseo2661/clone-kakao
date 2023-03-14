@@ -5,6 +5,8 @@ $(function () { //최초 웹브라우저가 동작하는 순간
     $("#interestDn").hide();
     $("#back").hide();
 
+
+    // 마이메뉴버튼 기능
     $("header .mbtn > a").click(function () {
         $(".mymenu").addClass("on");
 
@@ -13,6 +15,8 @@ $(function () { //최초 웹브라우저가 동작하는 순간
         })
     });
 
+
+    // 디자이너, 매장 검색창
     $(".dnsearchbox").click(function () {
         $(".dn-search-area, .dn-search").addClass("on");
 
@@ -33,6 +37,7 @@ $(function () { //최초 웹브라우저가 동작하는 순간
     });
 
 
+    // 컨텐츠1 탭메뉴 기능
     $(document).ready(function () {
         $('.tabconts .cont').first().show();
         $('.tablist > li').first().addClass('on');
@@ -46,7 +51,7 @@ $(function () { //최초 웹브라우저가 동작하는 순간
     })
 });
 
-
+// 마이메뉴 #my 리스트 버튼 기능
 let pageFlag = false;
 
 function change(menu) {
@@ -67,7 +72,7 @@ function change(menu) {
     };
 };
 
-function back(){
+function back() {
     $("#reserve").show();
     $("#interestShop").show();
     $("#interestDn").show();

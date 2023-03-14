@@ -396,7 +396,7 @@ width:100%; height:100%; object-fit:cover}
 
 
 /* 컨텐츠-1 시작 */
-.subject {margin-left: 17vw;margin-top: 17.7vw;margin-bottom: 10px;}
+.subject {margin-left: 17vw;margin-top: 17.7vw;margin-bottom: 10px; }
 .subject h2 {font-family:'NotoSansKR-Bold';font-size: 27px;display:inline-block;margin-right: 8px;}
 .subject .localico {width: 20px;height: 20px;background:url(../img/placeico.png) no-repeat 0 0;background-size:contain;display:inline-block;margin-bottom: -2px;}
 .subject .localname {display:inline-block;font-family:'NotoSansKR-Medium';font-size: 17px;margin: 0 0px 0px -3px;}
@@ -716,14 +716,16 @@ footer .f-info {
     100% {opacity: 1;transform: translateY(0px) }
 } */
 
-.dn-search-area .dn-search-inner {position:absolute;top:80px;height: 400px;width:100%;background:#fff;padding: 20px;}
+.dn-search-area .dn-search-inner {position:absolute;top:80px;height: 400px;width:100%;
+    background:#fff;padding: 20px;}
 .dn-search-inner .close-btn {position:absolute;right: 55px;top: 30px;}
-.dn-search-inner .close-btn > a {width: 21px;height: 21px;background:url(../img/closebtn.png) no-repeat 0 0;
+.dn-search-inner .close-btn > a {width: 21px;height: 21px;
+    background:url(../img/closebtn.png) no-repeat 0 0;
     display:inline-block;background-size: contain;}
 
-
 .dn-search-inner .dn-search.on {opacity: 1;transform: translateY(0px); transition:all 1s linear } 
-.dn-search-inner .dn-search {position:relative;margin: 130px auto 0 auto;width: 900px;opacity:0;transform: translateY(-15px);}
+.dn-search-inner .dn-search {position:relative;margin: 130px auto 0 auto;width: 900px;
+    opacity:0;transform: translateY(-15px);}
 .dn-search-inner .dn-search .ico {
     width: 30px;
     height: 30px;
