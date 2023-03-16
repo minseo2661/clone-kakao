@@ -700,24 +700,30 @@ footer .f-info {
 /* 디자이너, 매장 검색창 */
 .dn-search-area  {
  transform: translateY(-100%);
- transition:all 0.2s linear;
+ transition:all 0.3s linear;
  position: fixed;
  top:0;
  bottom:0;
  left:0;
  right:0;
  z-index: 10;
- background: rgba(255,255,255,0.8);
+ background: rgba(255,255,255,0.9);
  }
-.dn-search-area.on {transform: translateY(0%); transition:all 0.2s linear}
+.dn-search-area.on {transform: translateY(0%); transition:all 0.3s linear}
 
 /* @keyframes opacity {
     0% {opacity:0; transform: translateY(-15px);}
     100% {opacity: 1;transform: translateY(0px) }
 } */
 
-.dn-search-area .dn-search-inner {position:absolute;top:80px;height: 400px;width:100%;
-    background:#fff;padding: 20px;}
+.dn-search-area .dn-search-inner {
+    position:absolute;
+    top:80px;
+    height: 400px;
+    width:100%;
+    background:#fff;
+    padding: 20px;
+    }
 .dn-search-inner .close-btn {position:absolute;right: 55px;top: 30px;}
 .dn-search-inner .close-btn > a {width: 21px;height: 21px;
     background:url(../img/closebtn.png) no-repeat 0 0;
@@ -736,9 +742,17 @@ footer .f-info {
     left: 25px;
     top: 20px;
     }
-.dn-search-inner .dn-search input {width: 100%;background:#f5f5f5;height: 70px;border-radius: 50px;
-    font-family: 'NotoSansKR-Regular';font-size: 20px;padding-left: 75px;}
-.dn-search-inner .dn-search input::placeholder {color:#b5b5b5;}
+.dn-search-inner .dn-search input {
+    width: 100%;
+    background: #fee100;
+    height: 70px;
+    border-radius: 50px;
+    font-family: 'NotoSansKR-Regular';
+    font-size: 20px;
+    padding-left: 75px;
+    color:#050505
+    }
+.dn-search-inner .dn-search input::placeholder {color:#050505}
 .dn-search-inner .dn-search .delete {}
 .dn-search-inner .dn-search .delete .ico_delete {
     width: 30px;

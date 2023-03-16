@@ -8,15 +8,8 @@ a {text-decoration:none}
 
 
 .hairshop-card-area {
-    padding: 80px 0;
-    overflow-y: scroll;
-    height: 1500px;
-    width: 1230px;
-    margin: 0px auto;
-    }
-.hairshop-card-area::-webkit-scrollbar {width:10px; display:none}
-.hairshop-card-area::-webkit-scrollbar-thumb {height:10%; background:#161616; border-radius: 10px;}
-.hairshop-card-area::-webkit-scrollbar-track  {background:rgb(238, 238, 238); border-radius: 10px;}
+    padding: 80px 0;}
+
 
 .hairshop-card-area .hairshop-card {
     background:#fff;

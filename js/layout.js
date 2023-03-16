@@ -81,16 +81,16 @@ function back() {
 
 
 // 검색박스 클로즈버튼
-function showClose() {
-    if ($("#locationSearch, #datepicker, #myTimepicker, #dnSearch").val().length != 0) {
-        $("#close").show();
+function showClose(close) {
+    if ($("#locationSearch, #dnSearch").val().length != 0) {
+        $(close).show();
     } else {
-        $("#close").hide();
+        $(close).hide();
     }
 }
 
-function remove() {
-    $("#close").hide();
-    $("#locationSearch, #datepicker, #myTimepicker, #dnSearch").val("");
+function remove(close) {
+    $(close).hide();
+    $("#locationSearch, #dnSearch").val("");
 }
 
