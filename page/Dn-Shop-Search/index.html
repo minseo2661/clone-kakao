@@ -33,7 +33,7 @@
 		<div class="mymenu">
 			<div class="btnset">
 				<div class="backbtn" id="back">
-					<a href="javascript:change()"></a>
+					<a href="javascript:change('#reserve, #interestShop, #interestDn')"></a>
 				</div>
 				<div class="closebtn">
 					<a href="javascript:void(0)"></a>
@@ -58,9 +58,9 @@
 				<div class="group-txtLinkList" id="my">
 					<p>My</p>
 					<ul class="list">
-						<li><a href="javascript:change()">예약관리</a></li>
-						<li><a href="javascript:change()">관심 매장</a></li>
-						<li><a href="javascript:change()">관심 디자이너</a></li>
+						<li><a href="javascript:change('#reserve')">예약관리</a></li>
+						<li><a href="javascript:change('#interestShop')">관심 매장</a></li>
+						<li><a href="javascript:change('#interestDn')">관심 디자이너</a></li>
 					</ul>
 				</div>
 				<div class="group-txtLinkList" id="custom">
@@ -282,8 +282,8 @@
 
 	<div class="dn-shop-searchbox">
 		<span class="ico"></span>
-		<input type="text" id="dnSearch" class="dnsearchbox" placeholder="매장, 디자이너 이름으로 검색하세요" />
-		<button type="button" class="delete">
+		<input type="text" id="dnshopSearch" class="dnsearchbox" placeholder="매장, 디자이너 이름으로 검색하세요" />
+		<button type="button" class="delete" id="dn_shop_close" onclick="remove('#dn_shop_close')" style="display:none">
 			<span class="ico_delete">검색어 삭제</span>
 		</button>
 	</div>
@@ -291,33 +291,158 @@
 		<div class="tabnav-box-area">
 			<div class="tabnav-box">
 				<div class="tabnav-list">
-					<div class="tabnav on"><a href="javascript:void(0)">통합</a></div>
+					<div class="tabnav"><a href="javascript:void(0)">통합</a></div>
 					<div class="tabnav"><a href="javascript:void(0)">헤어샵</a></div>
 					<div class="tabnav"><a href="javascript:void(0)">디자이너</a></div>
 				</div>
 			</div>
 		</div>
 		<div class=bg-color>
-			<div class="shop-card-area">
-				<div class="title">헤어샵</div>
-				<ul class="card-list">
-					<li class="shopcard">
-						<div class="card-img">
-							<a href="javascript:void(0)"><img src="../../img/shop-3.jpg" alt=""></a>
-						</div>
-						<div class="shop-info">
-							<a href="javascript:void(0)">
-								<div class="shoptitle">살롱드라피네 본점</div>
-								<div class="iconbox">
-									<span class="ico star">4.9</span>
-									<span class="ico review">2,575</span>
-								</div>
-								<div class="address">강남역 4번출구 바로앞</span>
-								<div class="time">10:00~20:00</span>
-							</a>
-						</div>
-					</li>
-				</ul>
+			<div class="cardwrap">
+				<div class="shop-dn-card-area">
+					<div class="title">헤어샵</div>
+					<ul class="card-list">
+						<li class="shopcard">
+							<div class="card-img">
+								<a href="javascript:void(0)"><img src="../../img/shop-3.jpg" alt=""></a>
+							</div>
+							<div class="shop-info">
+								<a href="javascript:void(0)">
+									<div class="shoptitle">살롱드라피네 본점</div>
+									<div class="iconbox">
+										<span class="ico star">4.9</span>
+										<span class="ico review">2,575</span>
+									</div>
+									<div class="address">강남역 4번출구 바로앞</div>
+									<div class="time">10:00~20:00</div>
+								</a>
+							</div>
+						</li>
+						<li class="shopcard">
+							<div class="card-img">
+								<a href="javascript:void(0)"><img src="../../img/shop-1.jpg" alt=""></a>
+							</div>
+							<div class="shop-info">
+								<a href="javascript:void(0)">
+									<div class="shoptitle">라리엔 강남점</div>
+									<div class="iconbox">
+										<span class="ico star">4.8</span>
+										<span class="ico review">2,575</span>
+									</div>
+									<div class="address">강남역 1,4번출구 5분거리 (강남문화원 옆 스킬라티움 예식장 맞은편)</div>
+									<div class="time">10:30~20:00(휴무 일)</div>
+								</a>
+							</div>
+						</li>
+						<li class="shopcard">
+							<div class="card-img">
+								<a href="javascript:void(0)"><img src="../../img/shop-2.jpg" alt=""></a>
+							</div>
+							<div class="shop-info">
+								<a href="javascript:void(0)">
+									<div class="shoptitle">라우라헤어살롱 본점</div>
+									<div class="iconbox">
+										<span class="ico star">4.9</span>
+										<span class="ico review">11</span>
+									</div>
+									<div class="address">강남역 3번 출구 도보5분 1층에 바나프레소 건물 2층 중간입니다.</div>
+									<div class="time">11:00~21:00(휴무 일)</div>
+								</a>
+							</div>
+						</li>
+						<li class="shopcard">
+							<div class="card-img">
+								<a href="javascript:void(0)"><img src="../../img/shop01.jpg" alt=""></a>
+							</div>
+							<div class="shop-info">
+								<a href="javascript:void(0)">
+									<div class="shoptitle">준오헤어 강남우성사거리점</div>
+									<div class="iconbox">
+										<span class="ico star">4.9</span>
+										<span class="ico review">290</span>
+									</div>
+									<div class="address">강남역 신분당선 4번출구 도보3분</div>
+									<div class="time">10:00~20:00</div>
+								</a>
+							</div>
+						</li>
+					</ul>
+					<button type="button" class="btn-all-result">
+						45개 헤어샵 전체보기
+					</button>
+				</div>
+				<div class="shop-dn-card-area">
+					<div class="title">디자이너</div>
+					<ul class="card-list">
+						<li class="shopcard">
+							<div class="dn-img">
+								<a href="javascript:void(0)"><img src="../../img/profile01.jpg" alt=""></a>
+							</div>
+							<div class="shop-info">
+								<a href="javascript:void(0)">
+									<div class="shoptitle">원장 이서(7년)</div>
+									<div class="iconbox">
+										<span class="ico star">4.9</span>
+										<span class="ico review">6</span>
+									</div>
+									<div class="address">숨 메이크업 & 헤어 본점</div>
+									<div class="time">09:00~18:00</div>
+								</a>
+							</div>
+						</li>
+						<li class="shopcard">
+							<div class="dn-img">
+								<a href="javascript:void(0)"><img src="../../img/profile02.jpg" alt=""></a>
+							</div>
+							<div class="shop-info">
+								<a href="javascript:void(0)">
+									<div class="shoptitle">팀장 하민(4년)</div>
+									<div class="iconbox">
+										<span class="ico star">4.9</span>
+										<span class="ico review">126</span>
+									</div>
+									<div class="address">라리엔 강남점</div>
+									<div class="time">00:00~23:53(휴무 일)</div>
+								</a>
+							</div>
+						</li>
+						<li class="shopcard">
+							<div class="dn-img">
+								<a href="javascript:void(0)"><img src="../../img/profile03.jpg" alt=""></a>
+							</div>
+							<div class="shop-info">
+								<a href="javascript:void(0)">
+									<div class="shoptitle">디자이너 조이(5년)</div>
+									<div class="iconbox">
+										<span class="ico star">5</span>
+										<span class="ico review">4</span>
+									</div>
+									<div class="address">라리엔 강남점</div>
+									<div class="time">00:00~23:53(휴무 일)</div>
+								</a>
+							</div>
+						</li>
+						<li class="shopcard">
+							<div class="dn-img">
+								<a href="javascript:void(0)"><img src="../../img/profile04.jpg" alt=""></a>
+							</div>
+							<div class="shop-info">
+								<a href="javascript:void(0)">
+									<div class="shoptitle">디자이너 해원(4년)</div>
+									<div class="iconbox">
+										<span class="ico star">5</span>
+										<span class="ico review">15</span>
+									</div>
+									<div class="address">라리엔 강남점</div>
+									<div class="time">00:00~23:53(휴무 일)</div>
+								</a>
+							</div>
+						</li>
+					</ul>
+					<button type="button" class="btn-all-result">
+						45개 디자이너 전체보기
+					</button>
+				</div>
 			</div>
 		</div>
 	</div>

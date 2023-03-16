@@ -48,8 +48,20 @@ $(function () { //최초 웹브라우저가 동작하는 순간
         $(this).addClass('on');
         $('.tabconts .cont').hide();
         $('.tabconts .cont').eq($(this).index()).show();
+    });
+
+
+    // 디자이너/샵 검색페이지
+    $(document).ready(function(){
+        $('.tabnav-list .tabnav').first().addClass('on');
+    });
+    $('.tabnav-list .tabnav').click(function(){
+        $('.tabnav-list .tabnav').removeClass('on');
+        $(this).addClass('on');
     })
+
 });
+
 
 // 마이메뉴 #my 리스트 버튼 기능
 let pageFlag = false;
@@ -82,7 +94,7 @@ function back() {
 
 // 검색박스 클로즈버튼
 function showClose(close) {
-    if ($("#locationSearch, #dnSearch").val().length != 0) {
+    if ($("#locationSearch, #dnSearch, #dnshopSearch").val().length != 0) {
         $(close).show();
     } else {
         $(close).hide();
@@ -91,6 +103,6 @@ function showClose(close) {
 
 function remove(close) {
     $(close).hide();
-    $("#locationSearch, #dnSearch").val("");
+    $("#locationSearch, #dnSearch, #dnshopSearch").val("");
 }
 
