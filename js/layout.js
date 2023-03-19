@@ -58,7 +58,16 @@ $(function () { //최초 웹브라우저가 동작하는 순간
     $('.tabnav-list .tabnav').click(function(){
         $('.tabnav-list .tabnav').removeClass('on');
         $(this).addClass('on');
-    })
+    });
+
+    // 상세페이지 메뉴
+    $(document).ready(function(){
+        $('.shopnav .nav .navbtn').first().addClass('on');
+    });
+    $('.shopnav .nav .navbtn').click(function(){
+        $('.shopnav .nav .navbtn').removeClass('on');
+        $(this).addClass('on');
+    });
 
 });
 
@@ -92,17 +101,7 @@ function back() {
 };
 
 
-// 검색박스 클로즈버튼
-function showClose(close) {
-    if ($("#locationSearch, #dnSearch, #dnshopSearch").val().length != 0) {
-        $(close).show();
-    } else {
-        $(close).hide();
-    }
-}
-
-function remove(close) {
-    $(close).hide();
-    $("#locationSearch, #dnSearch, #dnshopSearch").val("");
+function fullHt (_this){
+    $(_this).toggleClass("on");
 }
 

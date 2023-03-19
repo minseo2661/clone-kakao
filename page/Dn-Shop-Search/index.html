@@ -282,8 +282,10 @@
 
 	<div class="dn-shop-searchbox">
 		<span class="ico"></span>
-		<input type="text" id="dnshopSearch" class="dnsearchbox" placeholder="매장, 디자이너 이름으로 검색하세요" />
-		<button type="button" class="delete" id="dn_shop_close" onclick="remove('#dn_shop_close')" style="display:none">
+		<input type="text" id="dnshopSearch" class="dnsearchbox" placeholder="매장, 디자이너 이름으로 검색하세요"
+			onkeyup="showClose('#dnshopSearch', '#dn_shop_close')" />
+		<button type="button" class="delete" id="dn_shop_close" onclick="remove('#dnshopSearch', '#dn_shop_close')"
+			style="display:none">
 			<span class="ico_delete">검색어 삭제</span>
 		</button>
 	</div>
@@ -512,6 +514,21 @@
 			minTime: "10:00am",
 			maxTime: "11:00pm"
 		});
+
+		// 검색박스 클로즈버튼
+		function showClose(search, close) {
+			if ($(search).val().length != 0) {
+				console.log(search);
+				$(close).show();
+			} else {
+				$(close).hide();
+			}
+		}
+
+		function remove(search, close) {
+			$(close).hide();
+			$(search).val("");
+		}
 
 	</script>
 </body>
