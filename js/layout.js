@@ -52,22 +52,24 @@ $(function () { //최초 웹브라우저가 동작하는 순간
 
 
     // 디자이너/샵 검색페이지
-    $(document).ready(function(){
+    $(document).ready(function () {
         $('.tabnav-list .tabnav').first().addClass('on');
     });
-    $('.tabnav-list .tabnav').click(function(){
+    $('.tabnav-list .tabnav').click(function () {
         $('.tabnav-list .tabnav').removeClass('on');
         $(this).addClass('on');
     });
 
     // 상세페이지 메뉴
-    $(document).ready(function(){
+    $(document).ready(function () {
         $('.shopnav .nav .navbtn').first().addClass('on');
     });
-    $('.shopnav .nav .navbtn').click(function(){
+    $('.shopnav .nav .navbtn').click(function () {
         $('.shopnav .nav .navbtn').removeClass('on');
         $(this).addClass('on');
     });
+
+
 
 });
 
@@ -101,7 +103,7 @@ function back() {
 };
 
 
-function fullHt (_this){
+function fullHt(_this) {
     $(_this).toggleClass("on");
 }
 

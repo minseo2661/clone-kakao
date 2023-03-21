@@ -11,11 +11,12 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 	<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/smoothness/jquery-ui.css">
 	<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
-	<link rel="stylesheet" href="../../css/jquery.timepicker.css">
+	<link rel="stylesheet" href="css/jquery.timepicker.css">
 	<link rel="stylesheet" href="../../css/style.css" type="text/css" />
 	<link rel="stylesheet" href="css/detailview.css">
 	<!-- <link rel="stylesheet" href="../../css/datepicker.css" /> -->
-	<link rel="stylesheet" href="../../css/custom.css" type="text/css" />
+	<!-- <link rel="stylesheet" href="../../css/custom.css" type="text/css" /> -->
+	<link rel="stylesheet" href="css/pagecustom.css" type="text/css" />
 
 
 	<script src="../../js/jquery-3.2.1.min.js" type="text/javascript"></script>
@@ -363,12 +364,48 @@
 						<li>지하철역주변</li>
 				</div>
 			</div>
+
 			<div class="right-box">
 				<div class="reserve-box">
-					<div class="choosebox">
+					<div class="selectbox">
 						<input type="text" id="datepicker" name="datepicker" placeholder="날짜 선택" />
 						<input type="text" id="myTimepicker" placeholder="시간 선택" />
-						<button type="button">디자이너 선택</button>
+						<div class="select ">
+							<button class="label">디자이너 선택</button>
+							<ul class="optionList">
+								<li class="optionItem">실장은우</li>
+								<li class="optionItem">디자이너 태희</li>
+								<li class="optionItem">디자이너 채웅</li>
+								<li class="optionItem">디자이너 리아</li>
+								<li class="optionItem">디자이너 아이</li>
+								<li class="optionItem">실장 유나</li>
+								<li class="optionItem">점장 예빈</li>
+							</ul>
+							<!-- </div>
+								<select name="designer" id="">
+									<option value="">디자이너 선택</option>
+									<option value="">실장 은우</option>
+									<option value="">실장 은우</option>
+									<option value="">실장 은우</option>
+									<option value="">실장 은우</option>
+									<option value="">실장 은우</option>
+								</select> -->
+
+
+							<!-- <button class="accordion">
+									디자이너 선택
+								</button>
+								<a href="javascript:voide(0)"><div class="downbtn"></div></a>
+								<ul class="dn-list">
+									<li><a href="javascript:voide(0)">실장 은우</a></li>
+									<li><a href="javascript:voide(0)">디자이너 태희</a></li>
+									<li><a href="javascript:voide(0)">디자이너 채웅</a></li>
+									<li><a href="javascript:voide(0)">디자이너 리아</a></li>
+									<li><a href="javascript:voide(0)">디자이너 아이</a></li>
+									<li><a href="javascript:voide(0)">실장 유나</a></li>
+									<li><a href="javascript:voide(0)">점장 예빈</a></li>
+								</ul> -->
+						</div>
 					</div>
 					<button type="button" class="reservebtn">예약하기</button>
 				</div>
@@ -966,11 +1003,14 @@
 			});
 
 			$("#myTimepicker").timepicker({
-				step: 60,            //시간간격
+				step: 30,            //시간간격
 				timeFormat: "H:i",   //시간:분 으로표시
 				minTime: "10:00am",
-				maxTime: "11:00pm"
+				maxTime: "9:00pm"
 			});
+
+
+
 
 		</script>
 </body>

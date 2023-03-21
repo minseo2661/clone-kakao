@@ -63,7 +63,6 @@ a {text-decoration:none}
 .detail-view-page-wrap .shoptitle .shopimg .imgbox > img {width:100%; height:100%; object-fit: full;}
 .swiper .swiper-button-next {width: 35px;height: 40px;background:url(../../../img/next-ico.png) no-repeat;background-size: contain;/* margin-right: 10px; */}
 .swiper .swiper-button-prev {width: 35px;height: 40px;background:url(../../../img/prev-ico.png) no-repeat;background-size: contain;margin-left: 13px;}
-.swiper-pagination {}
 .swiper-pagination-bullet {background:#fee100}
 
 
@@ -151,31 +150,42 @@ a {text-decoration:none}
     text-align: center;
     padding: 30px 25px;
 }
-.shop-info-area .right-box .reserve-box .choosebox {
+.shop-info-area .right-box .reserve-box .selectbox {
     display: grid;
     grid-template-columns: 1fr 1fr;
     border: 1px solid #888;
     border-radius: 10px;
+    position: relative;
 }
-.shop-info-area .right-box .reserve-box .choosebox input {
+.shop-info-area .right-box .reserve-box .selectbox input {
     padding: 15px 0px 15px 10px;
     text-align: left;
     font-family: 'NotoSansKR-Regular';
     font-size: 15px;
-    /* color: #888; */
     background:none;
     width: 100%;
 }
+.shop-info-area .right-box .reserve-box .selectbox input + input {border-left:1px solid #888}
 
-.shop-info-area .right-box .reserve-box .choosebox button {
+.shop-info-area .right-box .reserve-box .selectbox .select {
     padding: 10px 0px 25px 10px;
     text-align: left;
     font-family: 'NotoSansKR-Regular';
     font-size: 15px;
     color: #888;
+    grid-column: 1/3;
+    border-top: 1px solid #888;
 }
-.shop-info-area .right-box .reserve-box .choosebox button {grid-column: 1/3;border-top: 1px solid #888;}
-.shop-info-area .right-box .reserve-box .choosebox input + input {border-left:1px solid #888}
+/* .right-box .reserve-box .selectbox .downbtn {width:15px;height:15px;
+    background: url(../../../img/downico.png) no-repeat 0 0;background-size: contain;
+    position: absolute;right: 20px;top: 75px;} */
+
+
+.right-box .reserve-box .selectbox .dn-list > li {padding: 10px 10px;}
+.right-box .reserve-box .selectbox .dn-list > li + li {border-top:1px solid #888}
+.right-box .reserve-box .selectbox .dn-list > li > a {  font-family: 'NotoSansKR-Regular';}
+
+
 .shop-info-area .right-box .reserve-box .reservebtn {
     width: 200px;
     background: #fee100;
