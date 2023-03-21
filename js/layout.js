@@ -68,7 +68,26 @@ $(function () { //최초 웹브라우저가 동작하는 순간
         $('.shopnav .nav .navbtn').removeClass('on');
         $(this).addClass('on');
     });
+    
 
+    // 상세페이지 디자이너선택박스
+    const label = document.querySelector('.label');
+    const options = document.querySelectorAll('.optionItem');
+    const handleSelect = function (item) {
+        label.innerHTML = item.textContent;
+        label.parentNode.classList.remove('active');
+    }
+    options.forEach(function (option) {
+        option.addEventListener('click', function () { handleSelect(option) })
+    })
+
+    label.addEventListener('click', function () {
+        if (label.parentNode.classList.contains('active')) {
+            label.parentNode.classList.remove('active');
+        } else {
+            label.parentNode.classList.add('active');
+        }
+    });
 
 
 });
@@ -105,5 +124,7 @@ function back() {
 
 function fullHt(_this) {
     $(_this).toggleClass("on");
-}
+};
+
+
 
