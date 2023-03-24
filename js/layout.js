@@ -128,3 +128,9 @@ function fullHt(_this) {
 
 
 
+//클릭 시 스크롤 이동 함수
+function moveScroll(id){
+    let element = document.getElementById(id);
+
+    window.scrollTo(0, element.offsetTop-100);
+}

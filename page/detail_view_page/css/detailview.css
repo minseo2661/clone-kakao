@@ -168,7 +168,6 @@ a {text-decoration:none}
 
 
 /* 디자이너 선택박스 */
-.selectBox2 * { box-sizing: border-box; }
 .selectBox2 {
   position: relative;
   width: 300px;
@@ -204,15 +203,16 @@ a {text-decoration:none}
   /* transition: .3s ease-in; */
   border: 1px solid #888;
   display: none;
+ 
 }
 
 .selectBox2 .optionList::-webkit-scrollbar {width: 6px;}
-.selectBox2 .optionList::-webkit-scrollbar-track {background: transparent; }
-.selectBox2 .optionList::-webkit-scrollbar-thumb {background: #303030; border-radius: 45px;}
-.selectBox2 .optionList::-webkit-scrollbar-thumb:hover {background: #303030;}
+.selectBox2 .optionList::-webkit-scrollbar-track {background:rgb(238, 238, 238); border-radius: 10px;}
+.selectBox2 .optionList::-webkit-scrollbar-thumb {height:10%; background:#161616; border-radius: 10px;}
+
 
 .selectBox2.active .optionList {
-  max-height: 700px;
+  max-height: 400px;
   display:initial;
 }
 
