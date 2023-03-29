@@ -68,8 +68,8 @@ a {text-decoration:none}
 
 /* 메뉴바 */
 .shopnav-area {
-    width: 1200px;
     padding: 20px;
+    width:100%;
     border-bottom: 1px solid #f2f2f2;
 }
 .shopnav-area .shopnav {
